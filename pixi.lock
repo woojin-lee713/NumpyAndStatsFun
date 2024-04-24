@@ -54,6 +54,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/isoduration-20.11.0-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/jedi-0.19.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jinja2-3.1.3-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/joblib-1.4.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/json5-0.9.25-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/jsonpointer-2.4-py312h81bd7bf_3.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.21.1-pyhd8ed1ab_0.conda
@@ -155,6 +156,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/rfc3339-validator-0.1.4-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/rfc3986-validator-0.1.1-pyh9f0ad1d_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/rpds-py-0.18.0-py312h77200ec_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/scikit-learn-1.4.2-py312hd4306f4_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/scipy-1.13.0-py312h9d7df2b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/send2trash-1.8.3-pyh31c8845_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-69.5.1-pyhd8ed1ab_0.conda
@@ -163,6 +165,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/soupsieve-2.5-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/stack_data-0.6.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/terminado-0.18.1-pyh31c8845_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/threadpoolctl-3.4.0-pyhc1e730c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/tinycss2-1.2.1-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/tk-8.6.13-h5083fa2_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/tomli-2.0.1-pyhd8ed1ab_0.tar.bz2
@@ -1015,6 +1018,22 @@ packages:
   license_family: BSD
   size: 111589
   timestamp: 1704967140287
+- kind: conda
+  name: joblib
+  version: 1.4.0
+  build: pyhd8ed1ab_0
+  subdir: noarch
+  noarch: python
+  url: https://conda.anaconda.org/conda-forge/noarch/joblib-1.4.0-pyhd8ed1ab_0.conda
+  sha256: 56eea2c4af35a9c8f9cdca530f6aea0dc8e2551bfcc8b8da37da78221366af10
+  md5: e0ed1bf13ce3a440e022157bf4764465
+  depends:
+  - python >=3.8
+  - setuptools
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 220154
+  timestamp: 1712597317378
 - kind: conda
   name: json5
   version: 0.9.25
@@ -2766,6 +2785,29 @@ packages:
   size: 294636
   timestamp: 1707923464809
 - kind: conda
+  name: scikit-learn
+  version: 1.4.2
+  build: py312hd4306f4_0
+  subdir: osx-arm64
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/scikit-learn-1.4.2-py312hd4306f4_0.conda
+  sha256: 3c47f22fa3200113fed3c50da054dda0c69bba3118fbdcce6fb8567fc5b23996
+  md5: 0c05d05db3c1d7d4092761b940cd4e1e
+  depends:
+  - joblib >=1.2.0
+  - libcxx >=16
+  - llvm-openmp >=16.0.6
+  - llvm-openmp >=18.1.3
+  - numpy >=1.26.4,<2.0a0
+  - python >=3.12,<3.13.0a0
+  - python >=3.12,<3.13.0a0 *_cpython
+  - python_abi 3.12.* *_cp312
+  - scipy
+  - threadpoolctl >=2.0.0
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 9194883
+  timestamp: 1712825599759
+- kind: conda
   name: scipy
   version: 1.13.0
   build: py312h9d7df2b_0
@@ -2904,6 +2946,21 @@ packages:
   license_family: BSD
   size: 22717
   timestamp: 1710265922593
+- kind: conda
+  name: threadpoolctl
+  version: 3.4.0
+  build: pyhc1e730c_0
+  subdir: noarch
+  noarch: python
+  url: https://conda.anaconda.org/conda-forge/noarch/threadpoolctl-3.4.0-pyhc1e730c_0.conda
+  sha256: 4f4ad4f2a4ee8875cf2cb9c80abf4c7383e5e53cfec41104da7058569d9063b7
+  md5: b296278eef667c673bf51de6535bad88
+  depends:
+  - python >=3.8
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 23032
+  timestamp: 1710943698793
 - kind: conda
   name: tinycss2
   version: 1.2.1
